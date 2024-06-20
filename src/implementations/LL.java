@@ -1,4 +1,4 @@
-package intro;
+package implementations;
 
 public class LL {
     private Node head;
@@ -51,6 +51,44 @@ public class LL {
         tail = node;
         size++;
     }
+    // insert using recursion
+    public void insertRec(int val, int index) {
+        // helper
+        head = insertRec(val, index, head);
+    }
+    public Node insertRec(int val, int index, Node node) { // node initialized with head
+        // base case
+        if (index == 0) {
+            Node temp = new Node(val, node);
+            size++;
+            return temp;
+        }
+        node.next = insertRec(val, index - 1, node.next);
+        return node;
+    }
+    /* Mine was throwing NPExceptions
+        public void insertRec(int val, int index) {
+        if (head == null) {
+            System.out.println("list empty");
+            // addFirst();
+        }
+        Node node = new Node(val);
+        Node temp = getNodeRec(val, head);
+        node.next = temp.next;
+        temp.next = node;
+
+    }
+    public Node getNodeRec(int val, Node node) {
+        if (node == null) { // do testing
+            System.out.println("DNE");
+            return;
+        }
+        if (node.next != null && node.next.val == val) {
+            return node;
+        }
+        return getNodeRec(val, node.next);
+
+    }*/
     public void insertAt(int val, int index) {
         if (index == 0) {
             insertFirst(val);

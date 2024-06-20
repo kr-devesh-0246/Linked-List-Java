@@ -1,4 +1,4 @@
-package intro;
+package implementations;
 
 public class CLL {
     private Node head;

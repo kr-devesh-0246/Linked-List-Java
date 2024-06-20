@@ -1,4 +1,4 @@
-package intro;
+package implementations;
 
 public class Rough {
     private Node head;

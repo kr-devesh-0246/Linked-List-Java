@@ -1,6 +1,5 @@
-package intro;
+package implementations;
 
-import java.util.LinkedList;
 public class Main {
    public static void main(String[] args) {
 //      DLL list = new DLL();
@@ -15,11 +14,21 @@ public class Main {
       // insertLast method testing
       // combined display() not working properly
 
-      CLL list = new CLL();
+      /*CLL list = new CLL();
       list.insert(1);
       list.insert(2);
       list.insert(3);
       list.delete(1);
+      list.display();*/
+
+      // insertion using recursion
+      LL list = new LL();
+      list.insertLast(1);
+      list.insertLast(2);
+      list.insertLast(3);
+      list.insertLast(5);
+      list.display();
+      list.insertRec(4, 3);
       list.display();
 
 

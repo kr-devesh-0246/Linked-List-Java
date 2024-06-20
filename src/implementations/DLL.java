@@ -1,4 +1,4 @@
-package intro;
+package implementations;
 
 public class DLL {
     private Node head;
