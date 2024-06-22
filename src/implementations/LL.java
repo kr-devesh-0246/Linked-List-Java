@@ -161,4 +161,22 @@ public class LL {
         }
         System.out.println("null");
     }
+
+/*
+    // Interview Questions: timestamp 1:38 on youtube
+    private void bubbleSort(int row, int col) {
+    }*/
+
+    // reverse LL using recusion
+    private void reverse(Node node) {
+        if (node == tail) {
+            head = tail;
+            return;
+        }
+
+        reverse(node.next);
+        tail.next = node;
+        tail = node;
+        tail.next = null;
+    }
 }
