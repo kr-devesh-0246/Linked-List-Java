@@ -137,7 +137,7 @@ public class LL {
         size--;
         return val;
     }
-    public Node getNodeByIndex(int value) {
+    public Node getNodeByValue(int value) {
         Node node = head;
         while (node != null) {
             if (node.val == value)
@@ -146,7 +146,7 @@ public class LL {
         }
         return null;
     }
-    public Node getNodeByValue  (int index) {
+    public Node getNodeByIndex(int index) {
         Node node = head;
         for (int i = 0; i < index; i++) {
             node = node.next;
